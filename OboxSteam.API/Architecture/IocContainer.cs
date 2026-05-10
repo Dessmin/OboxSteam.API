@@ -6,6 +6,7 @@ using Minio;
 using OboxSteam.Application.Commons;
 using OboxSteam.Application.Interfaces;
 using OboxSteam.Application.Services;
+using OboxSteam.Infrastructure.Services;
 using OboxSteam.Infrastructure;
 using OboxSteam.Infrastructure.Commons;
 using OboxSteam.Infrastructure.Persistence;
@@ -132,7 +133,8 @@ public static class IocContainer
     public static IServiceCollection SetupBusinessServicesLayer(this IServiceCollection services)
     {
         services.AddScoped<IBlobService, BlobService>();
-        //services.AddScoped<IAuthService, AuthService>();
+        services.AddScoped<IEmailService, EmailService>();
+        services.AddScoped<IAuthService, AuthService>();
         return services;
     }
 

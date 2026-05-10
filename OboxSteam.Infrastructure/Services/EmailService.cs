@@ -4,7 +4,7 @@ using OboxSteam.Application.DTOs.EmailDTO;
 using OboxSteam.Application.Interfaces;
 using Resend;
 
-namespace OboxSteam.Application.Services;
+namespace OboxSteam.Infrastructure.Services;
 
 public class EmailService : IEmailService
 {

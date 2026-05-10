@@ -4,7 +4,7 @@ using Minio.DataModel.Args;
 using Minio.Exceptions;
 using OboxSteam.Application.Interfaces;
 
-namespace OboxSteam.Application.Services;
+namespace OboxSteam.Infrastructure.Services;
 
 public class BlobService : IBlobService
 {

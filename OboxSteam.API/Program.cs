@@ -132,8 +132,8 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 
 app.UseAuthentication();
 app.UseAuthorization();
-app.MapControllers();
 app.UseSession();
+app.MapControllers();
 
 app.Logger.LogInformation("OboxSteam API is running on http://0.0.0.0:5000");
 app.Run();

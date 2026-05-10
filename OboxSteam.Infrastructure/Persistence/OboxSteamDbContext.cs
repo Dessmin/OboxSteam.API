@@ -11,6 +11,7 @@ public class OboxSteamDbContext : DbContext
     }
 
     public DbSet<User> Users { get; set; }
+    public DbSet<OtpStorage> OtpStorages { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -22,6 +23,7 @@ public class OboxSteamDbContext : DbContext
 
         // Global query filter for soft delete
         modelBuilder.Entity<User>().HasQueryFilter(e => !e.IsDeleted);
+        modelBuilder.Entity<OtpStorage>().HasQueryFilter(e => !e.IsDeleted);
 
         // Configure User entity
         modelBuilder.Entity<User>(entity =>

@@ -51,6 +51,7 @@ public class GlobalExceptionMiddleware
             statusCode == 500 ? "An unexpected error occurred." : exception.Message
         );
 
-        return context.Response.WriteAsync(JsonSerializer.Serialize(response));
+        var options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+        return context.Response.WriteAsync(JsonSerializer.Serialize(response, options));
     }
 }
