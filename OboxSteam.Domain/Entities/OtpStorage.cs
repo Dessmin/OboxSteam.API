@@ -1,7 +1,7 @@
 using OboxSteam.Domain.Entities;
 using OboxSteam.Domain.Enums;
 using System.ComponentModel.DataAnnotations;
-
+namespace OboxSteam.Domain.Entities;
 public class OtpStorage : BaseEntity
 {
     [Required]
